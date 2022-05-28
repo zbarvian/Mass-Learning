@@ -1,2 +1,7 @@
-# Mass-Learning
-Besting the semi-empirical mass formula with a deep neural network. 
+# Comparing the predictions of the Semi-Empirical Mass Formula (SEMF) to a deep neural network
+
+The purpose of this notebook is to illustrate the difference in model-fitting between the Semi-Empirical Mass Formula (hereafter referred as 'SEMF') and a deep neural network. SEMF is a widely known, phenomenological model that predicts the binding energy of an isotope with only its number of neutrons and protons. It is a linear model with five terms that capture microscopic and quantum effects, and the model is 'semi-empirical' in that the coefficients for each term are interdependent and obtained by fitting the model to the experimental data. The same terms are used as features in a feedforward neural network, and the error between binding energy predictions is compared for the two models. 
+
+The linear SEMF is fitted by ordinary least squares regression. Fitting the neural network takes place in two steps: first by optimizing the "hyperparameters" (number of units per layer, amount of dropout, activation function, etc.), and then by training the model on the experimental data. 
+
+Final results show the obvious advantage of the neural network. This is an intuitive finding, since the neural network contains far more adjustable parameters than the five of the SEMF, and also nonlinearity in the hidden layer activation function. In the error analysis, the neural network is able to diminish the large errors around the so-called "magic numbers" where shell effects play a large role. 
