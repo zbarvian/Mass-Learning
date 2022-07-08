@@ -1,4 +1,4 @@
-# Comparing the predictions of the Semi-Empirical Mass Formula (SEMF) to aneural network
+# Comparing the predictions of the Semi-Empirical Mass Formula (SEMF) to a neural network
 
 The purpose of the attached 'dnn_semf_discrepancy' notebook is to illustrate the difference in model-fitting between the Semi-Empirical Mass Formula (hereafter referred to as 'SEMF') and a multilayer perceptron. SEMF is a widely known phenomenological model that predicts the binding energy of an isotope with only its number of neutrons and protons. It is a linear model with five terms that capture microscopic and quantum effects, and the model is 'semi-empirical' in that the coefficients for each term are interdependent and obtained by fitting the model to the experimental data. The same terms are used as features in a feedforward neural network, and the error between binding energy predictions is compared for the two models. 
 
